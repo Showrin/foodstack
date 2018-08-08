@@ -10,7 +10,7 @@
 
 	$connection = mysqli_connect('localhost', 'root', '', 'foodstack');
 		
-	$search_query = "SELECT * FROM users WHERE user_id = '$user_id'";
+	$search_query = "SELECT * FROM users WHERE userrr_id = '$user_id'";
 		
 	$result = mysqli_query($connection, $search_query);
 
