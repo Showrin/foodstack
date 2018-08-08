@@ -1,0 +1,1160 @@
+@import "materialize.scss";
+@import "notification-box-byShowrin";
+@import "friend-request-box-byShowrin";
+@import "weather-based-food-carousel";
+
+$btn-height: 70px;
+$my-color: #ff7043;
+
+html body * {
+	font-family: 'Sophia';
+}
+
+
+//================ login.php & signup.php Page Styles Start ===================
+#login-body {
+	background-image: url(../images/login_screen.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+	
+	#login-body {
+		background-image: url(../images/login_screen_mobile.jpg);
+	}
+}
+	
+
+
+
+header {
+
+	@media only screen and (max-width: 600px) {
+		margin-bottom: 15%;
+	}
+
+	#logo-container {
+		margin-top: 1%;
+
+		img {
+			width: 75%;
+		}
+	}
+
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+	color: #252525;
+}
+
+
+form {
+
+	.fab {
+		margin-right: 10px;
+		font-size: 18px;
+	}
+
+	#fb-btn {
+		background-color: #3949ab;
+		margin-right: 5%;
+	}
+
+	#google-btn {
+		background-color: #ef5350;
+		margin-left: 5%;
+	}
+
+	.login-error {
+		color: #e57373;
+		font-size: 14px;
+		padding-bottom: 20px;
+
+		i {
+			color: #e57373;
+			margin: auto 0;
+		}
+
+		span {
+			margin: auto 0;
+			margin-left: 5px;
+		}
+	}
+
+	.error {
+		margin-left: 42px;
+		color: #e57373;
+		font-size: 14px;
+		padding-bottom: 20px;
+
+		i {
+			color: #e57373;
+			margin: auto 0;
+		}
+
+		span {
+			margin: auto 0;
+			margin-left: 5px;
+		}
+	}
+
+	.error-hide {
+		display: none;
+	}
+
+	.error-show {
+		display: flex;
+	}
+	
+	.input-field input {
+      color: #fff;
+      letter-spacing: 1.5px; 
+    }
+
+    .prefix {
+    	color: white;
+    }
+
+    .prefix.active {
+    	color: $secondary-color;
+    }
+
+    .dropdown-content li > span {
+    	color: #252525;
+    }
+
+    .select-wrapper .caret {
+    	fill: white;
+    }
+
+    .datepicker-table td.is-today {
+		color: #ff6d00;
+	}
+
+	.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+		color: #ff6d00;
+	}
+
+	.datepicker-date-display {
+		background-color: #ff6d00;
+	}
+
+	.datepicker-table td.is-selected {
+		background-color: #ff6d00; 
+		color: #fff;
+	}
+
+	#only-date .select-wrapper input.select-dropdown {
+		color: #252525;
+	}
+
+
+
+    #file-btn {
+    	background-color: #ff6d00;
+    }
+
+    #login-btn, #signup-btn {
+    	margin-top: 5%;
+    	background-color: #ff6d00;
+    	border-radius: 20px;
+    	position: relative;
+    	left: 50%;
+    	transform: translate(-50%);
+    }
+
+
+}
+
+//================ login.html Page Styles End ===================
+
+
+
+
+
+
+//================ index.html (newsfeed) Page Styles Starts =====================
+
+$main-color: lighten(#ff6d00, 5%);
+
+#index-body {
+	margin: 0;
+	padding: 0;
+	background-color: $body-color;
+	position: absolute;
+	z-index: -1000;
+}
+
+
+// === Side Nav Bar ====
+#side-nav-bar {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: auto;
+	min-height: 100vh;
+	max-height: 100vh;
+	box-shadow: $shadow;
+
+	#logo-holder {
+		height: 70px;
+		background-color: $main-color;
+		//==== To align the logo in the middle =====
+		display: flex;
+		align-item: center;
+		justify-content: center;
+
+		a {
+			//==== To align the logo in the middle =====
+			//==== Because the div "a" is of same size as logo-holder ====
+			display: flex;
+			align-item: center;
+			justify-content: center;
+		}
+
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			width: 70%;
+			height: auto;
+			//==== To align the logo in the middle =====
+			margin: auto;
+		}
+	}
+
+	.activity-holder {
+		height: 70px;
+		//==== To align the logo in the middle =====
+		display: flex;
+		align-item: center;
+		justify-content: center;
+
+		a {
+			//==== To align the logo in the middle =====
+			//==== Because the div "a" is of same size as logo-holder ====
+			display: flex;
+			align-item: center;
+			justify-content: center;
+		}
+
+		i {
+			max-width: 100%;
+			max-height: 100%;
+			font-size: 21px;
+			color: #a7abc7;
+			height: auto;
+			//==== To align the logo in the middle =====
+			margin: auto;
+		}
+		i:hover {
+			color: $main-color;
+			transition: all 300ms;
+		}
+
+		.mdl-tooltip--right {
+			margin-left: 15px;
+			font-size: 14px;
+			letter-spacing: 1px;
+			background-color: rgba(66,66,66,1);
+		}
+	}
+}
+
+
+// === Top Nav Bar ===
+
+#top-nav-bar {
+	background-color: #3f4257;
+	margin-left: 70px;
+	float: right;
+	width: calc(100vw - 70px);
+	height: 70px;
+	position: fixed;
+	z-index: 1;
+
+	.input-field {
+	    margin-top: 0;
+	    margin-bottom: 0;
+	}
+
+	input {
+		border: none;
+		height: 70px;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		letter-spacing: .1px;
+	}
+	input:focus {
+		box-shadow: none;
+		color: #fff;
+	}
+	::placeholder {
+	    color: #fff;
+	    opacity: .5; /* Firefox */
+	    font-weight: 100;
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	   color: #fff;
+	   opacity: .5;
+	   font-weight: 100;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */
+	   color: #fff;
+	   opacity: .5;
+	   font-weight: 100;
+	}
+
+
+	button {
+		height: 70px;
+		width: 100%;
+		border-radius: 0px;
+		box-shadow: none;
+		background: none;
+		//==== To align the logo in the middle =====
+		display: flex;
+		align-item: center;
+		justify-content: center;
+
+		i {
+			font-size: 20px;
+			color: #abafc3;
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+			//==== To align the logo in the middle =====
+			margin: auto;
+		}
+	}
+	button:hover {
+		
+		i {
+			color: #eeeeee;
+			transition: all 400ms;
+		}
+	}
+
+	.middle-align {
+		
+		#pro-pic {
+			float: left;
+			max-width: 100%;
+			max-height: 100%;
+			height: 44px;
+			border-radius: 50%;
+			margin-top: 13px;
+			margin-left: 10%;
+			
+		}
+		#pro-pic:hover {
+			box-shadow: $shadow;
+			transition: all 400ms;
+		}
+
+		#id-name {
+			float: left;
+			font-size: 14px;
+			color: #abafc3;
+			margin-top: 22px;
+			margin-left: 2%;
+		}
+		#id-name:hover {
+			color: #eeeeee;
+			transition: all 400ms;
+		}
+
+		button {
+			float: left;
+			width: 40px;
+
+			i {
+				margin: 0;
+				font-size: 20px;
+			}
+		}
+
+		#more-option-btn {
+
+			i {
+				font-size: 16px;
+			}
+		}
+
+		#more-option-list {
+			width: 180px;
+
+			li {
+				color: #707070;
+			}
+
+			i {
+				margin-top: 16px;
+				margin-right: 12px;
+				font-size: 14px;
+				color: $main-color;
+			}
+		}
+
+		i {
+			float: left;
+			font-size: 20px;
+			color: #abafc3;
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+			margin-top: 25px;
+			margin-right: 8%;
+		}
+		i:hover {
+			color: #eeeeee;
+			transition: all 400ms;
+		}
+
+
+		#notification-explorer {
+
+			top: $btn-height;
+		}
+
+		#friend-request-btn {
+			margin-right: 20px;
+		}
+
+		#friend-request-explorer {
+
+			top: $btn-height;
+		}
+
+		.mdl-menu__outline {
+			border-radius: 0px;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+			box-shadow: $shadow;
+		}
+
+	}
+
+}
+
+#change-password {
+
+	.error {
+		margin-left: 42px;
+		color: #e57373;
+		font-size: 14px;
+		padding-bottom: 20px;
+
+		i {
+			color: #e57373;
+			margin: auto 0;
+		}
+
+		span {
+			margin: auto 0;
+			margin-left: 5px;
+		}
+	}
+
+	.error-hide {
+		display: none;
+	}
+
+	.error-show {
+		display: flex;
+	}
+	
+	.input-field input {
+      color: #252525;
+      letter-spacing: 1.5px; 
+      border-bottom: 2px solid $my-color;
+    }
+    .input-field label.active {
+      color: $my-color;
+    }
+
+    .prefix {
+    	color: #252525;
+    }
+
+    .prefix.active {
+    	color: $my-color;
+    }
+
+}
+
+
+#change-info {
+
+	.error {
+		margin-left: 42px;
+		color: #e57373;
+		font-size: 14px;
+		padding-bottom: 20px;
+
+		i {
+			color: #e57373;
+			margin: auto 0;
+		}
+
+		span {
+			margin: auto 0;
+			margin-left: 5px;
+		}
+	}
+
+	.error-hide {
+		display: none;
+	}
+
+	.error-show {
+		display: flex;
+	}
+	
+	.input-field input {
+      color: #252525;
+      letter-spacing: 1.5px; 
+      border-bottom: 2px solid $my-color;
+    }
+    .input-field label.active {
+      color: $my-color;
+    }
+
+    .prefix {
+    	color: #252525;
+    }
+
+    .prefix.active {
+    	color: $my-color;
+    }
+
+}
+
+
+
+#main-section-holder {
+
+	background-color: $body-color;
+	height: auto;
+	width: calc(100% - 70px);
+	right: 0;
+	margin-top: 70px;
+	overflow-x: hidden;
+	position: absolute;
+	z-index: -1;
+
+	.content-holder {
+		width: 100%;
+	}
+
+	.sidebar {
+		padding: 10px;
+
+	    .content-holder {
+	    	position: relative; 
+	    	top: 0;
+	    }
+
+	    .card-image {
+			box-shadow: $shadow;
+	    }
+
+	    #weather {
+
+	    	#tempurature {
+	    		top: 10%;
+	    		font-size: 3.6vw;
+	    		padding: 0;
+	    		left: 1.7vw;
+	    	}
+
+	    	#day-status {
+	    		top: 20%;
+	    		font-size: 1.7vw;
+	    		padding: 0;
+	    		left: 1.7vw;
+	    	}
+
+	    	#food-carousel-headline {
+				font-size: 1vw;
+				padding: 0;
+				height: 2vw;
+				left: 1.7vw;
+				// top: 18vw;
+				bottom: 6vw;
+			}
+
+	    	#food-carousel-holder {
+	    		display: flex;
+	    		//background-color: rgba(255,255,255,.12);
+				width: 100%;
+				height: 6vw;
+				bottom: 0;
+				left: 0;
+				padding: 0;
+
+				.slider:hover .slide-track {
+					animation-play-state: paused;
+				} 
+	    	}
+	    }
+
+	    #collection-header {
+	    	color: $my-color;
+	    	font-size: 1.2vw;
+	    	height: 40px;
+	    	display: flex;
+
+	    	span {
+
+	    		margin: auto;
+	    	}
+	    }
+
+	    .add-btn {
+	    	background-color: $my-color;
+	    	font-size: .9vw;
+	    	padding-left: 10px;
+	    	padding-right: 10px;
+	    }
+	    .add-btn:hover {
+	    	box-shadow: none;
+	    }
+	}
+
+
+
+	.post-container {
+		
+
+		#main-paper {
+			width: calc(35vw * 1.04);
+			height: auto;
+			background-color: #fff;
+			margin: auto;
+			box-shadow: $shadow;
+
+			.status {
+				background: url("../images/login_screen.jpg");
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				.input-field textarea {
+      				color: #fff;
+			      	letter-spacing: 1.5px; 
+			    }
+
+			    input[type="range"]::-moz-range-thumb {
+			    	background-color: $my-color;
+			    }
+
+			    .thumb {
+			    	background-color: $my-color;
+			    	margin-top: 10%;
+			    	display: flex;
+
+			    	span {
+			    		margin: auto;
+			    	}
+			    }
+
+			    input[type="range"]::-moz-range-track {
+			    	height: 2px;
+			    	border-radius: 10px;
+			    }
+
+			}
+
+
+			#status-header {
+				color: $my-color;
+		    	font-size: 1.2vw;
+		    	height: 60px;
+		    	width: 90%;
+		    	margin: auto;
+				margin-top: 18px;
+		    	display: flex;
+		    	border-bottom: 2px solid $my-color;
+
+		    	span {
+
+		    		margin: auto;
+		    	}
+			}
+		}
+
+		.post-holder {
+			width: calc(35vw * 1.04);
+			margin: 0 auto;
+			margin-top: 18px;
+			height: 35vw;
+			background-color: #fff;
+			position: relative;
+			// box-shadow: $shadow;
+
+			#shadow {
+				position: absolute;
+				width: 0%;
+			}
+
+			.post-header {
+				background-color: $my-color;
+				width: 100%;
+				height: 20%;
+				display: flex;
+				// box-shadow: inset 0px 11px 8px -10px rgba(0,0,0,.4);
+				box-shadow: inset 0 10px 10px -5px rgba(0,0,0,.16);
+
+				.name-holder {
+					float: left;
+					width: 70%;
+					height: auto;
+					margin: auto 4%;
+					display: flex;
+
+					img {
+						width: 16%;
+						height: 16%;
+						float: left;
+						border-radius: 50%;
+					}
+
+					.name {
+						float: left;
+						margin: auto;
+						margin-left: 4%;
+						color: #fff;
+						font-size: .9vw;
+						line-height: 160%;
+
+						b {
+							font-size: 1.2vw;
+						}
+					}
+				}
+
+				.rating-holder {
+					float: right;
+					width: 30%;
+					height: auto;
+					display: flex;
+
+					img {
+						width: 28%;
+						margin: auto;
+						margin-top: 12%;
+					}
+
+					.rating {
+						margin: auto;
+						margin-bottom: 10%;
+						margin-left: -64%;
+						color: #fff;
+						font-size: 1.4vw;
+					}
+				}
+			}
+
+
+
+			.post-pic {
+				height: calc(35vw * 1.04 * .5);
+				width: 100%;
+				position: relative;
+
+				svg {
+					position: absolute;
+					bottom: -1px;
+					fill: #fff;
+					width: 100%;
+				}
+			}
+
+
+			.post-detail {
+				width: 100%;
+				height: 9.8vw;
+
+				.post-text-plus-react {
+					width: 100%;
+					height: 6vw;
+
+					.post-text {
+						width: 80%;
+						height: 6vw;
+						padding-top: 5%;
+						padding-left: 6%;
+						float: left;
+						font-size: 1.5vw;
+						line-height: 120%;
+					}
+
+					.post-react {
+						width: 20%;
+						height: 6vw;
+						display: flex;
+						float: right;
+
+						.love-icon {
+							clear: both;
+							margin: auto;
+							width: 50%;
+							margin-top: 0;
+						}
+
+						.love-count {
+							clear: both;
+							margin: auto;
+							margin-bottom: 8%;
+							margin-left: -62%;
+							margin-right: 40%;
+							font-size: 2vw;
+						}
+					}
+				}
+
+				.action-icons {
+					width: 100%;
+					height: 3.8vw;
+					box-shadow: 0px 6px 6px rgba(0,0,0,.16);
+
+					.icon {
+						display: flex;
+						float: left;
+						width: 10%;
+						height: 3.8vw;
+						margin-left: 4%;
+						margin-top: -1%;
+
+						img {
+							width: 60%;
+							margin: auto;
+							cursor: pointer;
+						}
+
+						.bookmark {
+							width: 45%;
+						}
+					}
+
+					.icon-clock {
+						display: flex;
+						float: right;
+						width: 29%;
+						height: 3.8vw;
+
+						#clock {
+							float: left;
+							width: 25%;
+							display: flex;
+
+							img {
+								width: 55%;
+								margin: auto;
+							}
+						}
+
+						#time {
+							margin: auto 0;
+							font-size: 1.2vw;
+							color: #656565;
+						}
+					}
+				}
+			}
+
+			.ask-header {
+				background-color: #F2864E;
+				height: 16%;
+				position: relative;
+
+				#ask-shade {
+					z-index: 100;
+					position: absolute;
+					width: 100%;
+					height: auto;
+					max-width: 100%;
+					max-height: 100%;
+					margin-top: 14.5%;
+
+				}
+
+				.ask-name {
+					margin-bottom: 0px;
+				}
+
+				.ask-status {
+					
+					img {
+						margin-top: 12%;
+						margin-right: -90%;
+						width: 25%;
+					}
+
+					.rating {
+						margin-bottom: 2%;
+						margin-left: 40%;
+					}
+				}
+			}
+
+
+			.recipe-header {
+				background-color: #5c6bc0;
+				position: relative;
+			}
+
+			.recipe-detail {
+
+				.post-text-plus-react {
+
+					.post-text {
+						font-size: 1.6vw;
+						padding-left: 5%;
+					}
+				}
+			}
+
+			.offer-header {
+				background-color: #2e87be;
+				position: relative;
+
+				.offer-sticker {
+					position: absolute;
+					right: 0;
+					height: 140%;
+					width: 33%;
+					z-index: 300;
+
+					img {
+						width: 100%;
+						margin-top: 0px;
+					}
+				}
+			}
+
+			.recipe-detail {
+
+				.post-text-plus-react {
+
+					.post-text {
+						font-size: 1.6vw;
+						padding-left: 5%;
+					}
+				}
+			}
+		}
+
+		.ask-post-holder {
+			height: 33.3vw;
+
+			.post-pic {
+				background: url(../images/pizza.jpg);
+				background-size: cover;
+				background-position: center center;
+			}
+		}
+
+		.recipe-holder {
+
+			.post-pic {
+				background: url(../images/cake.jpeg);
+				background-size: cover;
+				background-position: center center;
+			}
+		}
+
+
+		.modal {
+
+			max-height: 80%;
+			box-shadow: 0px 6px 6px rgba(0,0,0,.16);
+			top: 30%;
+
+			.post-header {
+				background-color: $my-color;
+				width: 100%;
+				height: 8vw;
+				display: flex;
+				// box-shadow: inset 0px 11px 8px -10px rgba(0,0,0,.4);
+				box-shadow: inset 0 10px 10px -5px rgba(0,0,0,.16);
+
+				.name-holder {
+					float: left;
+					width: 70%;
+					height: auto;
+					margin: auto 4%;
+					display: flex;
+
+					img {
+						width: 16%;
+						height: 16%;
+						float: left;
+						border-radius: 50%;
+					}
+
+					.name {
+						float: left;
+						margin: auto;
+						margin-left: 4%;
+						color: #fff;
+						font-size: .9vw;
+						line-height: 160%;
+
+						b {
+							font-size: 1.2vw;
+						}
+					}
+				}
+
+				.rating-holder {
+					float: right;
+					width: 30%;
+					height: auto;
+					display: flex;
+
+					img {
+						width: 25%;
+						margin: auto;
+						margin-top: 8%;
+					}
+
+					.rating {
+						margin: auto;
+						margin-bottom: 7%;
+						margin-left: -62%;
+						color: #fff;
+						font-size: 1.4vw;
+					}
+				}
+			}
+
+			.post-pic {
+				height: 35vw;
+				width: 100%;
+				position: relative;
+
+				svg {
+					position: absolute;
+					bottom: -1px;
+					fill: #fff;
+					width: 100%;
+				}
+			}
+
+			.post-detail {
+				width: 100%;
+				height: auto;
+				background-color: white;
+
+				.post-text-plus-react {
+					width: 100%;
+					height: auto;
+
+					.post-text {
+						width: 80%;
+						height: auto;
+						padding-top: 5%;
+						padding-left: 6%;
+						padding-bottom: 6%;
+						float: left;
+						font-size: 1.5vw;
+						line-height: 120%;
+						text-align: justify;
+					}
+
+					.post-react {
+						width: 20%;
+						height: auto;
+						display: flex;
+						float: right;
+						padding-bottom: 2%;
+
+						.love-icon {
+							clear: both;
+							margin: auto;
+							width: 50%;
+							padding-top: 25%;						
+						}
+
+						.love-count {
+							clear: both;
+							margin: auto;
+							margin-bottom: 0;
+							padding-top: 100%;
+							margin-left: -62%;
+							margin-right: 40%;
+							font-size: 2vw;
+						}
+					}
+				}
+
+				.action-icons {
+					width: 100%;
+					height: 3.8vw;
+					clear: both;
+					padding-bottom: 10%;
+
+					.icon {
+						display: flex;
+						float: left;
+						width: 10%;
+						height: 3.8vw;
+						margin-left: 4%;
+						margin-top: -1%;
+
+						img {
+							width: 60%;
+							margin: auto;
+							cursor: pointer;
+						}
+
+						.bookmark {
+							width: 45%;
+						}
+					}
+
+					.icon-clock {
+						display: flex;
+						float: right;
+						width: 18%;
+						height: 3.8vw;
+
+						#clock {
+							float: left;
+							width: 20%;
+							display: flex;
+
+							img {
+								width: 55%;
+								margin: auto;
+							}
+						}
+
+						#time {
+							margin: auto 0;
+							font-size: 1.2vw;
+							color: #656565;
+						}
+					}
+				}
+			}
+		}
+
+
+
+	}	
+}
+
+
+
+

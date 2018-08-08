@@ -1,0 +1,164 @@
+/* I M P O R T    F I L E S */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+/* S C R O L L   B A R */
+::-webkit-scrollbar {
+	min-width: 6px;
+	width: 6px;
+	max-width: 6px;
+    min-height: 6px;
+	height: 6px;
+	max-height: 6px;
+	background-color: #252C33;
+    box-shadow: inset 0px 50px 0px #1b232a;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(255,255,255,0.2);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255,255,255,0.1);
+}
+::-webkit-scrollbar-thumb:active {
+	background: rgba(255,255,255,0.1);
+}
+::-webkit-scrollbar-button {
+	display: block;
+    height: 25px;
+}
+
+/* N O T I F I C A T I O N S */
+
+.notificationslider{
+    width: 250px;
+    height: 0px;
+    position: absolute;
+    top: 0px;
+    right: 350px;
+}
+.notifications{
+    background: #121a21;
+    height: 500px;
+    width: 350px;
+    position: relative;
+    top: -595px;
+    right: 110px;
+    border-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 95px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0px -50px 0px #121a21;
+    transition: all .4s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+}
+.notification{
+    display: block;
+    position: relative;
+    background: rgba(255,255,255,0.02);
+    padding: 7px;
+    border-radius: 3px;
+    font-family: Lato;
+    color: #DDD;
+    margin-bottom: 5px;
+    transition: all .1s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+}
+.notification:hover{
+    background: rgba(255,255,255,0.05);
+}
+input#notifications + label{
+    font-size: 25px;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    float: right;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    transition: all .5s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+}
+input#notifications{
+    position:absolute;
+    opacity:0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+input#notifications + label:before {
+    font-family: 'FontAwesome';
+    content: "\f0f3";
+    color: rgba(255,255,255,0.55);
+    position: absolute;
+    top: 13px;
+    right: 22px;
+    cursor: pointer;
+}
+input#notifications:checked + label:before {
+    content: "\f0f3";
+    color: rgba(255,255,255,0.7);
+    transition: all .2s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+    cursor: pointer;
+}
+input#notifications:checked + label {
+    top: 0px;
+    width: 340px;
+}
+input#notifications + label div.notificationscounter{
+    position: absolute;
+    bottom: 11px;
+    left: 39px;
+    background: #59ABE3;
+    font-size: 0px;
+    color: #FFF;
+    border-radius: 500px;
+    padding: 5px 5px;
+    transition: all .2s cubic-bezier(0.565, -0.260, 0.255, 1.410);
+}
+input#notifications:checked + label .notificationscounter{
+    position: absolute;
+    bottom: 12px;
+    left: 30px;
+    background: #59ABE3;
+    font-size: 15px;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 3px 6px;
+}
+input#notifications:checked ~ .notifications {
+    top: -40px;
+}
+
+/* N O T I F I C A T I O N   S T Y L E S */
+
+.notifications .notification b{
+    font-weight: 700;
+    text-shadow: 0px 0px 4px #222;
+}
+
+.notifications .notification.follow{
+    padding-left: 40px;
+}
+.notifications .notification.follow img{
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    opacity: 0.9;
+}
+
+.notifications .notification.message:before{
+    font-family: 'FontAwesome';
+    contet: "\f0e0;";
+    font-size: 20px;
+    color: #59ABE3;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}

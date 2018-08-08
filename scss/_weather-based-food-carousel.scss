@@ -1,0 +1,69 @@
+$animationSpeed: 12s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-6.5vw * 6))}
+}
+
+
+// Styling
+.slider {
+	height: 4.5vw;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+	
+	&::before,
+	&::after {
+		content: "";
+		height: 4.5vw;
+		position: absolute;
+		width: 0px;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(6.5vw * 12);
+	}
+	
+	.slide {
+		height: 4.5vw;
+		width: 6.5vw;
+		display: flex;
+
+		.btn {
+			border-radius: 50%;
+			background-color: transparent;
+			border: none;
+			box-shadow: none;
+		}
+
+		.tooltipped {
+			top: 20px;
+		}
+
+	}
+
+	.slide img {
+		border-radius: 50%;
+		border: 3px solid #fff;
+		height: 4.2vw;
+		width: 4.2vw;
+		margin: auto;
+	}
+
+}

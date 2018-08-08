@@ -1,0 +1,5 @@
+{"Apple": null,
+"Microsoft": null,
+"Google": 'images/dp/17.jpg',
+"Nafisa": 'images/dp/17.jpg'
+}

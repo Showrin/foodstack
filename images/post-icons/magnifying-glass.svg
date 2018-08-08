@@ -1,0 +1,10 @@
+<svg id="magnifying-glass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 31.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Path_444" data-name="Path 444" class="cls-1" d="M42.114,40.263,34.541,32.69a13.264,13.264,0,1,0-1.858,1.858l7.573,7.566a1.311,1.311,0,0,0,1.858-1.851ZM24.275,34.908A10.636,10.636,0,1,1,34.914,24.275,10.646,10.646,0,0,1,24.275,34.908Z" transform="translate(-11 -11)"/>
+</svg>
